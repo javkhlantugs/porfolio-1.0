@@ -1,0 +1,20 @@
+// Place all the styles related to the site controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html,
+body {
+	height: 100%;
+}
+// About me section
+
+.my-container {
+	background-image: url("/assets/nature.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.avatar {
+	width: 100%;
+}
