@@ -1,7 +1,9 @@
 $(document).on('turbolinks:load', function() {
 	$('.my-container').css('height', minimumHeight())
 	$('.avatar-container').css('height', aboutHeight())
-});
+	$('.js-developer').click(adjustWidthDev())
+	})
+
 
 // windows height
 var windowsHeight = function () {
@@ -18,7 +20,7 @@ function minimumHeight() {
 		return halfHeight
 	}
 }
-
+//windows height end
 
 //about height
 
@@ -28,3 +30,9 @@ function aboutHeight() {
 	console.log(hei);
 	return hei
 }
+
+// about height end
+
+// developer window
+
+
