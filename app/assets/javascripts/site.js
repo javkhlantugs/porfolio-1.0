@@ -37,22 +37,22 @@ function aboutHeight() {
 
 //portfolio animation
 function adjustWidthDev() {
-	if (checkDesignerWindow()){
-		$('.js-designer').toggleClass('designer-min designer-window');
-		$('.js-developer').toggleClass('developer-min developer-window');
+	if (checkDeveloperMin()){
+		$('.js-developer').toggleClass('developer-window developer-min')
+		$('.js-designer').toggleClass('designer-min designer-window')
 	} else {
 		$('.js-developer').toggleClass('window-active window-inactive developer-window developer-window-inactive');
-		$('.js-designer').toggleClass('window-active window-inactive designer-min');
+		$('.js-designer').toggleClass('window-active window-inactive designer-min designer-window-inactive');
 	}
 }
 
 function adjustWidthDes() {
-	if (checkDeveloperWindow()){
+	if (checkDesignerMin()){
 		$('.js-developer').toggleClass('developer-min developer-window');
 		$('.js-designer').toggleClass('designer-min designer-window');
 	} else {
 		$('.js-designer').toggleClass('window-active window-inactive designer-window designer-window-inactive')
-		$('.js-developer').toggleClass('window-active window-inactive developer-min')
+		$('.js-developer').toggleClass('window-active window-inactive developer-min developer-window-inactive')
 	}
 }
 
@@ -69,4 +69,10 @@ function checkDesignerWindow() {
 
 function checkDeveloperWindow() {
 	return $('.js-developer').hasClass('developer-window');
+}
+function checkDesignerMin() {
+	return $('.js-designer').hasClass('designer-min');
+}
+function checkDeveloperMin() {
+	return $('.js-developer').hasClass('developer-min');
 }
