@@ -5,6 +5,11 @@
 html,
 body {
 	height: 100%;
+	background-image: url("/assets/nature.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 button:focus, button:active {outline:0 !important;}
 
@@ -43,19 +48,46 @@ button:focus, button:active {outline:0 !important;}
 	position: relative;
 }
 
-.developer-window, .designer-window{
-	display: inline-block;
+.developer-window-inactive, .designer-window-inactive{
 	width: 50%;
-	border: black 1px solid;
+	transition: all 0.4s;
+}
+
+.designer-window, .developer-window, .developer-window-inactive, .designer-window-inactive {
+	display: inline-block;
 	position: absolute;
 }
 
+.developer-window {
+	width: 80%;
+	transition: all 0.4s;
+}
+
+.developer-min {
+	width: 20%;
+	transition: all 0.4s;
+}
+
+.designer-min {
+	width: 20%;
+	transition: all 0.4s;
+}
 .designer-window {
+	width: 80%;
+	transition: all 0.4s;
+}
+.designer-window-inactive, .designer-window {
 	right: 0;
 }
 
+.inner-border {
+	margin: 5px;
+	border: 1px solid black;
+	height: 96%;
+}
+
 @media only screen and (max-width: 768px) {
-	.developer-window, .designer-window {
+	.developer-window, .designer-window, .developer-window-inactive, .designer-window-inactive {
 		width: 100%;
 		position: static;
 	}
@@ -65,7 +97,7 @@ button:focus, button:active {outline:0 !important;}
 	border-radius: 0;
 	background: none !important;
 	padding: 12px 22px;
-	border: 2px solid black;
+	border: 1px solid black;
 	color: black;
 	margin-top: 20px;
 	margin-bottom: 10px;
@@ -79,4 +111,8 @@ button:focus, button:active {outline:0 !important;}
 	border-color: #007299 !important;
 	color: black !important;
 	box-shadow: none !important;
+}
+
+.window-active {
+	height: 500px !important;
 }
